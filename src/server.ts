@@ -6,12 +6,7 @@ import cors from '@fastify/cors'
 const app = fastify();
 
 app.register(cors, { 
-  origin: (origin, cb) => {
-    if (origin) {
-      cb(null, true);
-      return;
-    }
-  }
+  origin: '*'
 })
 
 const prisma = new PrismaClient();
