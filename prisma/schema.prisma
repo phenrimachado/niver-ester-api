@@ -15,5 +15,8 @@ model Guest {
   name      String
   email     String
   phone     String
+  adults    Int?
+  kidsUpTo6 Int?
+  kidsOver6 Int?
   createdAt DateTime @default(now())
 }
